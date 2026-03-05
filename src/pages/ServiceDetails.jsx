@@ -24,7 +24,7 @@ export default function ServiceDetails() {
     <div className="page-content inner-page border-t-divide pb-0">
       
       {/* Hero Section */}
-      <div className="section-container">
+      <div className="section-container" style={{marginTop: '48px', marginBottom: '48px'}}>
         <div className="sd-hero">
           <div className="sd-breadcrumb">
             HOME <span>•</span> SERVICES <span>•</span> {service.name.toUpperCase()}
@@ -45,7 +45,7 @@ export default function ServiceDetails() {
       </div>
 
       {/* Sub-Services Block */}
-      <div className="section-container pb-24">
+      <div className="section-container pb-24" style={{marginTop: '48px', marginBottom: '48px'}}>
         <h3 className="sd-section-title">{service.subServicesTitle}</h3>
         <div className="sd-grid">
           {service.subServices.map((sub, idx) => (
@@ -58,7 +58,7 @@ export default function ServiceDetails() {
       </div>
 
       {/* Why Choose Us Block */}
-      <div className="section-container pb-24">
+      <div className="section-container pb-24" style={{marginTop: '48px', marginBottom: '48px'}}>
         <h3 className="sd-section-title">{service.whyChooseTitle}</h3>
         <div className="sd-grid">
           {service.whyChoose.map((reason, idx) => (
@@ -77,7 +77,7 @@ export default function ServiceDetails() {
 
       {/* Process Block */}
       <div className="sd-process-wrapper">
-        <div className="section-container">
+        <div className="section-container" style={{marginTop: '48px', marginBottom: '48px'}}>
           <h3 className="sd-section-title mb-16">Our Process</h3>
           <div className="sd-process-grid">
             {service.process.map((proc, idx) => (
@@ -92,7 +92,7 @@ export default function ServiceDetails() {
       </div>
 
       {/* Metrics Block */}
-      <div className="section-container pt-24 pb-24">
+      <div className="section-container pt-24 pb-24" style={{marginTop: '48px', marginBottom: '48px'}}>
         <h3 className="sd-section-title">What We Track & Improve</h3>
         <div className="sd-metrics-grid">
           {service.metrics.map((metric, idx) => (

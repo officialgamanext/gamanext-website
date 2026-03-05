@@ -1,0 +1,71 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="section-container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <Link to="/" className="nav-logo">
+              <div className="nav-logo-icon">G</div>
+              <span className="nav-logo-text">amanext</span>
+            </Link>
+            <p>Empowering businesses with next-generation AI tools, custom software solutions, and digital marketing strategies.</p>
+            <div className="social-links">
+              <a href="#"><Facebook size={20} /></a>
+              <a href="#"><Twitter size={20} /></a>
+              <a href="#"><Linkedin size={20} /></a>
+              <a href="#"><Instagram size={20} /></a>
+            </div>
+          </div>
+          
+          <div className="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><Link to="/services">AI Tools Development</Link></li>
+              <li><Link to="/services">Web Designing</Link></li>
+              <li><Link to="/services">Digital Marketing</Link></li>
+              <li><Link to="/services">Billing & ERP Software</Link></li>
+              <li><Link to="/services">Automatic Chatbots</Link></li>
+            </ul>
+          </div>
+          
+          <div className="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="#">Careers</Link></li>
+              <li><Link to="#">Privacy Policy</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Contact Us</h4>
+            <div className="contact-item">
+              <MapPin size={20} />
+              <span>123 Innovation Drive, Tech Park, Silicon Valley, CA 94043</span>
+            </div>
+            <div className="contact-item">
+              <Phone size={20} />
+              <span>+1 (800) 123-4567</span>
+            </div>
+            <div className="contact-item">
+              <Mail size={20} />
+              <span>hello@gamanext.com</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>© 2026 Gamanext. All rights reserved.</p>
+          <p>Designed with precision for the future.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

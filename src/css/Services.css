@@ -1,0 +1,45 @@
+/* ==== Services Page ==== */
+.detailed-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding-bottom: 100px;
+}
+.detailed-service-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+  border-radius: 24px;
+  padding: 40px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.detailed-service-card:hover { 
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(44, 139, 251, 0.15);
+  border-color: rgba(44, 139, 251, 0.2);
+}
+.service-icon-lg {
+  background: rgba(44,139,251,0.1);
+  color: var(--accent-light);
+  width: 72px; height: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center; justify-content: center;
+  margin-bottom: 24px;
+}
+.service-features {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+.service-features li { display: flex; align-items: center; gap: 12px; color: var(--text-muted-light); }
+.detailed-service-card p { color: var(--text-muted-light); }
+.service-features li .text-blue { color: var(--accent-light); }
+
+@media (max-width: 768px) {
+  .detailed-services-grid {
+    grid-template-columns: 1fr;
+  }
+}

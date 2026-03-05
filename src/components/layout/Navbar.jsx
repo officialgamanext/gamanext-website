@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="section-container nav-content">
         <Link to="/" className="nav-logo" onClick={closeMenu}>
-          <div className="nav-logo-icon">G</div>
-          <span className="nav-logo-text">amanext</span>
+          <img src={logo} className='logo' alt="" />
         </Link>
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
           <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>Home</Link>

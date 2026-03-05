@@ -38,8 +38,24 @@
 .detailed-service-card p { color: var(--text-muted-light); }
 .service-features li .text-blue { color: var(--accent-light); }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .detailed-services-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .detailed-service-card {
+    padding: 24px;
+  }
+  .service-icon-lg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  .detailed-service-card h3 {
+    font-size: 20px;
   }
 }

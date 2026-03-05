@@ -38,9 +38,35 @@
 }
 .form-input:focus, .form-control:focus { outline: none; border-color: var(--accent-light); box-shadow: 0 0 0 3px rgba(44,139,251,0.1); background: white; }
 
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 60px;
+  }
+  .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contact-card {
+    flex: 1;
+    min-width: 250px;
+  }
+}
+
 @media (max-width: 768px) {
-  .contact-grid,
+  .contact-info {
+    flex-direction: column;
+  }
   .form-group-row {
     grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  .contact-form-container {
+    padding: 24px;
+  }
+  .contact-form-container h2 {
+    font-size: 26px;
+    margin-bottom: 24px;
   }
 }

@@ -8,7 +8,7 @@ export default function Home() {
     <div className="page-content">
       <section className="hero">
         <div className="hero-bg"></div>
-        <div className="hero-section-container">
+        <div className="section-container">
           <div className="hero-content">
             <div className="hero-badge">WELCOME TO GAMANEXT</div>
             <h1 className="hero-title">

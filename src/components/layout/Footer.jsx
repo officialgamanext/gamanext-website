@@ -46,15 +46,15 @@ const Footer = () => {
             <h4>Contact Us</h4>
             <div className="contact-item">
               <MapPin size={20} />
-              <span>123 Innovation Drive, Tech Park, Silicon Valley, CA 94043</span>
+              <span>Nellore, Andhra Pradesh, India</span>
             </div>
             <div className="contact-item">
               <Phone size={20} />
-              <span>+1 (800) 123-4567</span>
+              <span>+91 628 1288 314</span>
             </div>
             <div className="contact-item">
               <Mail size={20} />
-              <span>hello@gamanext.com</span>
+              <span>connect.gamanext@gmail.com</span>
             </div>
           </div>
         </div>

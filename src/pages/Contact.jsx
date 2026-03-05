@@ -24,8 +24,8 @@ export default function Contact() {
                 <Phone size={24} />
               </div>
               <h3 className="font-semibold text-lg mb-2">Phone</h3>
-              <p className="mb-1">+1 (800) 123-4567</p>
-              <p className="text-sm">Mon-Fri, 9am - 6pm PST</p>
+              <p className="mb-1">+91 628 1288 314</p>
+              <p className="text-sm">Mon-Fri, 9am - 6pm IST</p>
             </div>
             
             <div className="contact-card border rounded-2xl p-6 shadow-sm">
@@ -33,8 +33,7 @@ export default function Contact() {
                 <Mail size={24} />
               </div>
               <h3 className="font-semibold text-lg mb-2">Email</h3>
-              <p className="mb-1">hello@gamanext.com</p>
-              <p className="text-sm">support@gamanext.com</p>
+              <p className="mb-1">connect.gamanext@gmail.com</p>
             </div>
 
             <div className="contact-card border rounded-2xl p-6 shadow-sm">
@@ -42,7 +41,7 @@ export default function Contact() {
                 <MapPin size={24} />
               </div>
               <h3 className="font-semibold text-lg mb-2">Office</h3>
-              <p>123 Innovation Drive,<br/>Tech Park, Silicon Valley,<br/>CA 94043</p>
+              <p>Nellore,<br/>Andhra Pradesh,<br/>India</p>
             </div>
           </div>
 

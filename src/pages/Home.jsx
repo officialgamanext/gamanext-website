@@ -100,36 +100,36 @@ export default function Home() {
             </p>
           </div>
           <div className="services-grid">
-            <div className="service-card">
+            <Link to="/services/ai-tools" className="service-card block">
               <div className="service-icon"><Cpu size={32} /></div>
               <h3>AI Tools</h3>
               <p>Intelligent automation and predictive algorithms tailored for your business needs.</p>
-            </div>
-            <div className="service-card">
+            </Link>
+            <Link to="/services/web-designing" className="service-card block">
               <div className="service-icon"><Laptop size={32} /></div>
               <h3>Web Designing</h3>
               <p>Stunning, responsive, and high-performance websites that capture your brand's essence.</p>
-            </div>
-            <div className="service-card">
+            </Link>
+            <Link to="/services/custom-software" className="service-card block">
               <div className="service-icon"><Code size={32} /></div>
               <h3>Custom Software</h3>
               <p>Bespoke CRM, ERP, and enterprise software solutions to streamline operations.</p>
-            </div>
-            <div className="service-card">
+            </Link>
+            <Link to="/services/digital-marketing" className="service-card block">
               <div className="service-icon"><Megaphone size={32} /></div>
               <h3>Digital Marketing</h3>
               <p>Data-driven marketing strategies to expand your reach and accelerate growth.</p>
-            </div>
-            <div className="service-card">
+            </Link>
+            <Link to="/services/automatic-chatbots" className="service-card block">
               <div className="service-icon"><Bot size={32} /></div>
               <h3>Automatic Chatbots</h3>
               <p>24/7 intelligent customer support bots integrated seamlessly into your platforms.</p>
-            </div>
-            <div className="service-card">
+            </Link>
+            <Link to="/services/billing-software" className="service-card block">
               <div className="service-icon"><FileText size={32} /></div>
               <h3>Billing Software</h3>
               <p>Secure, efficient, and user-friendly invoicing and billing management systems.</p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

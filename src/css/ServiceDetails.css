@@ -1,0 +1,123 @@
+/* ==== Service Details Page ==== */
+.sd-breadcrumb {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted-dark);
+  margin-bottom: 24px;
+}
+.sd-breadcrumb span {
+  margin: 0 8px;
+  color: var(--accent-light);
+}
+
+.sd-hero {
+  max-width: 800px;
+  padding: 100px 0 60px;
+}
+.sd-hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+.sd-hero-desc {
+  font-size: 20px;
+  color: var(--text-muted-light);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.sd-hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.sd-section-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sd-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.sd-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.sd-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(44,139,251,0.15);
+  border-color: rgba(44,139,251,0.3);
+}
+
+.sd-process-wrapper {
+  background: var(--primary-bg);
+  padding: 100px 0;
+  color: white;
+}
+.sd-process-wrapper .sd-section-title {
+  color: white;
+}
+.sd-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.sd-process-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 32px;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+.sd-process-card:hover {
+  background: rgba(255,255,255,0.08);
+}
+.sd-process-step {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--accent-light);
+  opacity: 0.8;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.sd-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.sd-metric-card {
+  text-align: center;
+  padding: 40px 24px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+@media (max-width: 1024px) {
+  .sd-process-grid, .sd-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sd-hero { padding: 60px 0 40px; }
+  .sd-hero-title { font-size: 38px; }
+  .sd-hero-desc { font-size: 18px; }
+  .sd-hero-buttons { flex-direction: column; }
+  .sd-grid, .sd-process-grid, .sd-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

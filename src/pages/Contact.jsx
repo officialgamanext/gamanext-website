@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageCircle, Instagram } from 'lucide-react';
 import '../css/Contact.css';
 
 export default function Contact() {
@@ -19,6 +19,26 @@ export default function Contact() {
 
         <div className="contact-grid grid md:grid-cols-3 gap-10">
           <div className="contact-info space-y-6 md:col-span-1">
+            
+            {/* Quick Connect Card */}
+            <div className="contact-card border rounded-2xl p-6 shadow-sm">
+              <h3 className="font-semibold text-lg mb-4">Quick Connect</h3>
+              <div className="quick-connect-links flex gap-3">
+                <a href="tel:+916281288314" title="Call Us" className="qc-icon">
+                  <Phone size={22} />
+                </a>
+                <a href="#" title="WhatsApp" className="qc-icon">
+                  <MessageCircle size={22} />
+                </a>
+                <a href="#" title="Instagram" className="qc-icon">
+                  <Instagram size={22} />
+                </a>
+                <a href="mailto:connect.gamanext@gmail.com" title="Email Us" className="qc-icon">
+                  <Mail size={22} />
+                </a>
+              </div>
+            </div>
+
             <div className="contact-card border rounded-2xl p-6 shadow-sm">
               <div className="contact-icon bg-blue-10/10 text-blue w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <Phone size={24} />

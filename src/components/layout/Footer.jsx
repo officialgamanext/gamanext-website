@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Instagram, MapPin, Phone, Mail, Youtube, MessageCircle } from 'lucide-react';
+import Logo from '../../assets/logo-white.png'
 
 const Footer = () => {
   return (
@@ -9,15 +10,14 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="nav-logo">
-              <div className="nav-logo-icon">G</div>
-              <span className="nav-logo-text">amanext</span>
+              <img src={Logo} alt="" style={{width: '200px', height: '60px'}} />
             </Link>
             <p>Empowering businesses with next-generation AI tools, custom software solutions, and digital marketing strategies.</p>
             <div className="social-links">
-              <a href="#"><Facebook size={20} /></a>
-              <a href="#"><Twitter size={20} /></a>
-              <a href="#"><Linkedin size={20} /></a>
-              <a href="#"><Instagram size={20} /></a>
+              <a href="tel:+916281288314" title="Call Us"><Phone size={20} /></a>
+              <a href="#" title="WhatsApp"><MessageCircle size={20} /></a>
+              <a href="#" title="Instagram"><Instagram size={20} /></a>
+              <a href="#" title="YouTube"><Youtube size={20} /></a>
             </div>
           </div>
           

@@ -1,0 +1,219 @@
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card-premium {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-card-inner {
+  background: white;
+  border-radius: 32px;
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.product-card-premium:hover {
+  transform: translateY(-10px);
+}
+
+.product-card-premium:hover .product-card-inner {
+  box-shadow: 0 25px 50px -12px rgba(0, 74, 173, 0.1);
+  border-color: var(--accent-muted);
+}
+
+.product-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.product-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted-light);
+  background: #f1f5f9;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.product-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.product-description {
+  font-size: 15px;
+  color: var(--text-muted-light);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.features-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.product-features-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-muted-light);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.product-card-footer {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.btn-product-demo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--accent-muted);
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-product-demo:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+.custom-software-cta {
+  background: var(--primary-bg);
+  border-radius: 40px;
+  padding: 80px 40px;
+  margin-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-software-cta::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 20%, var(--accent-glow) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, var(--accent-glow) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.cta-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.cta-description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-actions .btn-primary {
+  width: auto;
+  min-width: 240px;
+  height: 54px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .custom-software-cta {
+    padding: 60px 24px;
+    border-radius: 30px;
+  }
+  
+  .cta-title {
+    font-size: 32px;
+  }
+  
+  .cta-description {
+    font-size: 16px;
+  }
+  
+  .cta-actions .btn-primary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-card-inner {
+    padding: 30px;
+  }
+  
+  .product-title {
+    font-size: 22px;
+  }
+}

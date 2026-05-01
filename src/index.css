@@ -1,10 +1,12 @@
 :root {
   --primary-bg: #000b1a;
   --secondary-bg: #ffffff;
-  --accent-color: #0062ff;
-  --accent-light: #2c8bfb;
+  --accent-color: #004aad; /* Deep logo blue */
+  --accent-light: #0066cc; /* Lighter accent blue */
+  --accent-glow: rgba(0, 74, 173, 0.3);
+  --accent-muted: rgba(0, 74, 173, 0.1);
   --text-light: #ffffff;
-  --text-dark: #000000;
+  --text-dark: #0f172a;
   --text-muted-dark: #94a3b8;
   --text-muted-light: #475569;
   --font-family: "Poppins", sans-serif;

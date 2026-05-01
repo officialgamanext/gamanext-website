@@ -33,7 +33,7 @@ export default function Contact() {
                 <a href="#" title="Instagram" className="qc-icon">
                   <Instagram size={22} />
                 </a>
-                <a href="mailto:connect.gamanext@gmail.com" title="Email Us" className="qc-icon">
+                <a href="mailto:official.gamanext@gmail.com" title="Email Us" className="qc-icon">
                   <Mail size={22} />
                 </a>
               </div>
@@ -53,7 +53,7 @@ export default function Contact() {
                 <Mail size={24} />
               </div>
               <h3 className="font-semibold text-lg mb-2">Email</h3>
-              <p className="mb-1">connect.gamanext@gmail.com</p>
+              <p className="mb-1">official.gamanext@gmail.com</p>
             </div>
 
             <div className="contact-card border rounded-2xl p-6 shadow-sm">
@@ -61,7 +61,7 @@ export default function Contact() {
                 <MapPin size={24} />
               </div>
               <h3 className="font-semibold text-lg mb-2">Office</h3>
-              <p>Nellore,<br/>Andhra Pradesh,<br/>India</p>
+              <p>Hyderabad,<br/>Telangana,<br/>India</p>
             </div>
           </div>
 

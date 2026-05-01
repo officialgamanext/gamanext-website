@@ -39,8 +39,8 @@
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   background-image: 
-    radial-gradient(ellipse at 80% 20%, rgba(44,139,251,0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 20% 80%, rgba(44,139,251,0.1) 0%, transparent 50%);
+    radial-gradient(ellipse at 80% 20%, var(--accent-muted) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, var(--accent-muted) 0%, transparent 50%);
   z-index: 2;
 }
 
@@ -74,7 +74,7 @@
 
 .text-blue {
   color: var(--accent-light);
-  text-shadow: 0 0 30px rgba(44, 139, 251, 0.3);
+  text-shadow: 0 0 30px var(--accent-glow);
 }
 
 .hero-desc {
@@ -159,15 +159,15 @@
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px -10px rgba(44, 139, 251, 0.15);
-  border-color: rgba(44, 139, 251, 0.2);
+  box-shadow: 0 20px 40px -10px var(--accent-glow);
+  border-color: var(--accent-muted);
 }
 
 .service-icon {
   width: 64px;
   height: 64px;
-  background: rgba(44, 139, 251, 0.1);
-  color: var(--accent-light);
+  background: var(--accent-muted);
+  color: var(--accent-color);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -241,7 +241,7 @@
   gap: 20px;
 }
 .benefit-icon-wrapper {
-  background: rgba(44,139,251,0.1);
+  background: var(--accent-muted);
   width: 48px;
   height: 48px;
   border-radius: 12px;

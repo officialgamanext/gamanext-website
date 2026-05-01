@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, MapPin, Phone, Mail, Youtube, MessageCircle } from 'lucide-react';
-import Logo from '../../assets/logo-white.png'
+import Logo from '../../assets/logo-h.png'
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="nav-logo">
-              <img src={Logo} alt="" style={{width: '200px', height: '60px'}} />
+              <img src={Logo} alt="Gamanext" style={{ width: '200px', height: 'auto', filter: 'brightness(0) invert(1)' }} />
             </Link>
             <p>Empowering businesses with next-generation AI tools, custom software solutions, and digital marketing strategies.</p>
             <div className="social-links">
@@ -20,7 +20,7 @@ const Footer = () => {
               <a href="#" title="YouTube"><Youtube size={20} /></a>
             </div>
           </div>
-          
+
           <div className="footer-col">
             <h4>Services</h4>
             <ul>
@@ -31,7 +31,7 @@ const Footer = () => {
               <li><Link to="/services">Automatic Chatbots</Link></li>
             </ul>
           </div>
-          
+
           <div className="footer-col">
             <h4>Company</h4>
             <ul>
@@ -46,7 +46,7 @@ const Footer = () => {
             <h4>Contact Us</h4>
             <div className="contact-item">
               <MapPin size={20} />
-              <span>Nellore, Andhra Pradesh, India</span>
+              <span>Hyderabad, Telangana, India</span>
             </div>
             <div className="contact-item">
               <Phone size={20} />
@@ -54,14 +54,14 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <Mail size={20} />
-              <span>connect.gamanext@gmail.com</span>
+              <span>official.gamanext@gmail.com</span>
             </div>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
           <p>© 2026 Gamanext. All rights reserved.</p>
-          <p>Designed with precision for the future.</p>
+          {/* <p>Designed with precision for the future.</p> */}
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, Instagram, Youtube, MessageCircle } from 'lucide-react';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo-h.png';
 import { megaMenuStructure } from '../../data/servicesData';
 
 const Navbar = () => {

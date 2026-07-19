@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -50,6 +50,22 @@ import {
 
 export default function ServicesPage() {
   const [activeSection, setActiveSection] = useState("website-services");
+  const containerRef = useRef<HTMLDivElement>(null);
+  const pillRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+
+  useEffect(() => {
+    const activePill = pillRefs.current[activeSection];
+    const container = containerRef.current;
+    if (activePill && container) {
+      const pillLeft = activePill.offsetLeft;
+      const pillWidth = activePill.clientWidth;
+      const containerWidth = container.clientWidth;
+      container.scrollTo({
+        left: pillLeft - containerWidth / 2 + pillWidth / 2,
+        behavior: "smooth",
+      });
+    }
+  }, [activeSection]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -152,10 +168,41 @@ export default function ServicesPage() {
 
       {/* 2. MAIN CONTENT WITH STICKY SIDEBAR */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* STICKY HORIZONTAL CATEGORY NAVIGATION FOR MOBILE */}
+        <div className="sticky top-[65px] z-30 bg-white/95 backdrop-blur-md border-b border-slate-200/90 py-2.5 shadow-sm lg:hidden -mx-4 sm:-mx-6 px-4 sm:px-6 mb-6">
+          <div
+            ref={containerRef}
+            className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 scroll-smooth"
+          >
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeSection === item.id;
+              return (
+                <button
+                  key={item.id}
+                  ref={(el) => {
+                    pillRefs.current[item.id] = el;
+                  }}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-bold shrink-0 transition-all ${
+                    isActive
+                      ? "bg-blue-600 text-white shadow-md shadow-blue-500/25 scale-[1.02]"
+                      : "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200/60"
+                  }`}
+                >
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? "text-white" : "text-slate-500"}`} />
+                  <span>{item.name}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* LEFT STICKY SIDEBAR */}
-          <aside className="lg:col-span-3 sticky top-24 space-y-6">
+          {/* LEFT STICKY SIDEBAR (DESKTOP ONLY) */}
+          <aside className="hidden lg:block lg:col-span-3 lg:sticky lg:top-24 space-y-6">
             {/* Sidebar Navigation */}
             <div className="bg-white rounded-3xl p-5 border border-slate-200/90 shadow-sm space-y-3">
               <h3 className="text-xs font-extrabold text-blue-600 uppercase tracking-wider px-2">
@@ -209,7 +256,7 @@ export default function ServicesPage() {
           <main className="lg:col-span-9 space-y-10">
             
             {/* BLOCK 1: WEBSITE SERVICES */}
-            <section id="website-services" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-28">
+            <section id="website-services" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-36 lg:scroll-mt-28">
               <div className="flex items-start gap-4 pb-4 border-b border-slate-100">
                 <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20">
                   <Globe className="w-6 h-6" />
@@ -357,7 +404,7 @@ export default function ServicesPage() {
             </section>
 
             {/* BLOCK 2: DIGITAL MARKETING */}
-            <section id="digital-marketing" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-28">
+            <section id="digital-marketing" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-36 lg:scroll-mt-28">
               <div className="flex items-start gap-4 pb-4 border-b border-slate-100">
                 <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-emerald-500/20">
                   <Megaphone className="w-6 h-6" />
@@ -485,7 +532,7 @@ export default function ServicesPage() {
             </section>
 
             {/* BLOCK 3: CREATIVE & BRANDING */}
-            <section id="creative-branding" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-28">
+            <section id="creative-branding" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-36 lg:scroll-mt-28">
               <div className="flex items-start gap-4 pb-4 border-b border-slate-100">
                 <div className="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-purple-500/20">
                   <Palette className="w-6 h-6" />
@@ -589,7 +636,7 @@ export default function ServicesPage() {
             </section>
 
             {/* BLOCK 4: BUSINESS & AI SOLUTIONS */}
-            <section id="business-ai-solutions" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-28">
+            <section id="business-ai-solutions" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-36 lg:scroll-mt-28">
               <div className="flex items-start gap-4 pb-4 border-b border-slate-100">
                 <div className="w-12 h-12 rounded-2xl bg-sky-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-sky-500/20">
                   <Briefcase className="w-6 h-6" />
@@ -729,7 +776,7 @@ export default function ServicesPage() {
             </section>
 
             {/* BLOCK 5: AI SOLUTIONS */}
-            <section id="ai-solutions" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-28">
+            <section id="ai-solutions" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6 scroll-mt-36 lg:scroll-mt-28">
               <div className="flex items-start gap-4 pb-4 border-b border-slate-100">
                 <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-indigo-500/20">
                   <Brain className="w-6 h-6" />

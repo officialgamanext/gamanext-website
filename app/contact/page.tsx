@@ -17,6 +17,7 @@ import {
   Sparkles,
   ShieldCheck,
   Check,
+  Loader2,
 } from "lucide-react";
 
 export default function ContactPage() {
@@ -29,16 +30,45 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.message) {
-      setSubmitted(true);
-      setTimeout(() => {
-        setSubmitted(false);
+    setErrorMessage("");
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setErrorMessage("Please fill in all required fields (Name, Email, Message).");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setSubmitted(true);
         setFormData({ name: "", email: "", phone: "", subject: "", company: "", message: "" });
-      }, 5000);
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 6000);
+      } else {
+        setErrorMessage(data.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setErrorMessage("Network error occurred. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -217,12 +247,28 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {errorMessage && (
+                      <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-xs text-red-700 font-medium text-center animate-in fade-in">
+                        {errorMessage}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-full shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center gap-2"
+                      disabled={isSubmitting}
+                      className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:opacity-75 text-white font-bold text-xs rounded-full shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed"
                     >
-                      Send Message
-                      <ArrowRight className="w-4 h-4" />
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Sending Message...
+                        </>
+                      ) : (
+                        <>
+                          Send Message
+                          <ArrowRight className="w-4 h-4" />
+                        </>
+                      )}
                     </button>
 
                     <p className="text-[11px] text-slate-400 text-center flex items-center justify-center gap-1.5 pt-1">
@@ -351,7 +397,7 @@ export default function ContactPage() {
 
             <div className="pt-4">
               <a
-                href="https://maps.google.com/?q=Vedayapalem+Nellore+Andhra+Pradesh"
+                href="https://maps.app.goo.gl/KXzfti3nBG722yUd7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-blue-600 text-blue-600 font-bold text-xs rounded-full shadow-sm hover:bg-blue-50 transition-colors"
@@ -366,13 +412,14 @@ export default function ContactPage() {
           <div className="lg:col-span-7 bg-slate-100 relative min-h-[350px] border-t lg:border-t-0 lg:border-l border-slate-200">
             {/* Map Frame Graphic */}
             <iframe
-              title="Gamanext Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.02341234567!2d79.9750!3d14.4426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI2JzMzLjQiTiA3OcKwNTgnMzAuMCJF!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin"
+              title="Gamanext Software Solutions - Office Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.2050188008284!2d79.9555995!3d14.4153418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf3cc7065adad%3A0x132b564ae8325856!2sGama%20Next!5e0!3m2!1sen!2sin!4v1721000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '350px' }}
-              allowFullScreen={false}
+              allowFullScreen={true}
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full filter brightness-95 contrast-105"
             />
             {/* Map Pin Card Overlay */}

@@ -136,7 +136,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>© 2024 Gamanext. All Rights Reserved.</p>
           <p className="flex items-center gap-1">
-            Design with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 inline" /> by Gamanext Team
+            Made with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 inline" /> by Gamanext Team
           </p>
         </div>
       </div>

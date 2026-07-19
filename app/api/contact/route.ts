@@ -19,11 +19,13 @@ function serviceBox(char: string, label: string): string {
 
 function logoHeader(): string {
   return `<tr>
-    <td style="background:#ffffff;padding:22px 40px 16px;text-align:center;border-bottom:3px solid #1a3fa0;">
-      <div style="font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:700;color:#1a3fa0;letter-spacing:-1px;line-height:1;">
-        Gaman<span style="font-style:italic;">ext</span><sup style="font-size:12px;">&#8482;</sup>
-      </div>
-      <div style="font-size:10px;font-weight:700;letter-spacing:4px;color:#334155;margin-top:5px;">&#8212;&#160;SOFTWARE SOLUTIONS&#160;&#8212;</div>
+    <td style="background:#ffffff;padding:20px 40px 16px;text-align:center;border-bottom:3px solid #1a3fa0;">
+      <img
+        src="https://ik.imagekit.io/peh3xvmh1/Gama%20Next%20Horizontal%20(5)%20(1).png"
+        alt="Gamanext Software Solutions"
+        width="200"
+        style="display:block;margin:0 auto;max-width:200px;height:auto;border:0;"
+      />
     </td>
   </tr>`;
 }
@@ -94,10 +96,10 @@ function servicesAndFooter(year: number): string {
   <tr>
     <td style="background:#1a3fa0;padding:13px 16px;">
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
-        <td style="text-align:center;color:#ffffff;font-size:11px;padding:0 6px;border-right:1px solid rgba(255,255,255,0.3);">www.gamanext.com</td>
-        <td style="text-align:center;color:#ffffff;font-size:11px;padding:0 6px;border-right:1px solid rgba(255,255,255,0.3);">info@gamanext.com</td>
-        <td style="text-align:center;color:#ffffff;font-size:11px;padding:0 6px;border-right:1px solid rgba(255,255,255,0.3);">+91 62812 88314</td>
-        <td style="text-align:center;color:#ffffff;font-size:11px;padding:0 6px;">India</td>
+        <td style="text-align:center;color:#ffffff !important;font-size:11px;padding:0 6px;border-right:1px solid rgba(255,255,255,0.3);">www.gamanext.com</td>
+        <td style="text-align:center;color:#ffffff !important;font-size:11px;padding:0 6px;border-right:1px solid rgba(255,255,255,0.3);">info@gamanext.com</td>
+        <td style="text-align:center;color:#ffffff !important;font-size:11px;padding:0 6px;border-right:1px solid rgba(255,255,255,0.3);">+91 62812 88314</td>
+        <td style="text-align:center;color:#ffffff !important;font-size:11px;padding:0 6px;">India</td>
       </tr></table>
     </td>
   </tr>

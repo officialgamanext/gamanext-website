@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+
+.sectionWrapper {
+    width: 100%;
+    background-color: #f8fafc;
+    padding: 42px 0 48px;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* ================= Header Row ================= */
+.headerRow {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 34px;
+    gap: 20px;
+}
+
+.titleArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeWrapper {
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+    /* Strict 6px */
+    line-height: 1.2;
+}
+
+.headingGroup {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.7px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Strict 34px Button & 6px Radius */
+.actionArea {
+    flex-shrink: 0;
+}
+
+.discussBtn {
+    height: 34px;
+    /* Strict 34px */
+    padding: 0 18px;
+    background-color: #ffffff;
+    color: #0b57d0;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    /* Strict 6px */
+    font-size: 12.5px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(11, 87, 208, 0.04);
+}
+
+.discussBtn:hover {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+    transform: translateY(-1px);
+}
+
+/* ================= 5 Steps Linear Strip ================= */
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding-top: 14px;
+}
+
+.stepItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.iconNumberGroup {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.stepNumberBadge {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.iconWrap {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.textGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.stepTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+    margin: 0 0 3px;
+}
+
+.stepDesc {
+    font-size: 11px;
+    line-height: 1.45;
+    color: #64748b;
+    margin: 0;
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .sectionWrapper {
+        padding: 34px 0 40px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 12.5px;
+    }
+
+    /* 3 columns on top, 2 columns on bottom */
+    .stepsGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 16px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .sectionWrapper {
+        padding: 28px 0 34px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .headerRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .headingGroup {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .actionArea {
+        width: 100%;
+    }
+
+    .discussBtn {
+        width: 100%;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    /* 1-column step layout on mobile */
+    .stepsGrid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .stepItem {
+        align-items: center;
+        gap: 12px;
+        background-color: #ffffff;
+        border: 1px solid #eef2f6;
+        border-radius: 6px;
+        padding: 12px 14px;
+    }
+
+    .stepTitle {
+        font-size: 12.5px;
+    }
+
+    .stepDesc {
+        font-size: 11px;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .heading {
+        font-size: 21px;
+    }
+}

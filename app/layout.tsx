@@ -1,36 +1,33 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Sora } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
 
-const inter = Inter({
+const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sora",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Gamanext Software Solutions | Smart Solutions. Stronger Businesses.",
-  description:
-    "We design websites, build powerful software and deliver AI-driven solutions that help your business grow, automate and lead in the digital world.",
-  icons: {
-    icon: "/fav.png",
-    shortcut: "/fav.png",
-    apple: "/fav.png",
-  },
+  title: "Gamanext - Software Solutions",
+  description: "High-performance modern software and digital web solutions.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col font-sans bg-slate-50 text-slate-900 pt-20" suppressHydrationWarning>
+    <html lang="en" className={sora.variable} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Header />
-        <main className="flex-1 w-full">{children}</main>
+        <main style={{ flex: 1 }}>{children}</main>
         <Footer />
+        <WhatsAppWidget />
       </body>
     </html>
   );

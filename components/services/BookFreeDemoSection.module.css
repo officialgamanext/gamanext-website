@@ -1,0 +1,369 @@
+.sectionWrapper {
+    width: 100%;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding: 80px 0 90px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+/* Left Info Column */
+.infoCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.tagWrapper {
+    margin-bottom: 14px;
+}
+
+.tagBadge {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+}
+
+.heading {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin: 0 0 16px;
+}
+
+.headingHighlight {
+    color: #0b57d0;
+}
+
+.description {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #475569;
+    margin: 0 0 32px;
+}
+
+.perksList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.perkItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.perkIconBox {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #0b57d0;
+}
+
+.perkContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.perkTitle {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.perkSub {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 1px;
+}
+
+.whatsappPrompt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+}
+
+.whatsappIcon {
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.whatsappText {
+    display: flex;
+    flex-direction: column;
+}
+
+.whatsappTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #166534;
+}
+
+.whatsappLink {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #15803d;
+    text-decoration: underline;
+}
+
+/* Right Form Card */
+.formCard {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 36px 32px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.cardHeader {
+    margin-bottom: 24px;
+}
+
+.cardTitle {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.4px;
+    margin: 0 0 6px;
+}
+
+.cardSubtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.twoColRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #334155;
+    letter-spacing: 0.2px;
+}
+
+.inputField,
+.textareaField {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #0f172a;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.inputField {
+    height: 38px;
+}
+
+.inputField:focus,
+.textareaField:focus,
+.selectField:focus {
+    border-color: #0b57d0;
+    box-shadow: 0 0 0 3px rgba(11, 87, 208, 0.12);
+}
+
+.selectWrap {
+    position: relative;
+    width: 100%;
+}
+
+.selectField {
+    width: 100%;
+    height: 38px;
+    padding: 0 32px 0 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #0f172a;
+    background-color: #ffffff;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.selectArrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    color: #64748b;
+}
+
+.textareaField {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Submit CTA (34px height & 6px radius) */
+.submitBtn {
+    height: 38px;
+    background-color: #0b57d0;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(11, 87, 208, 0.25);
+    transition: background-color 0.15s ease, transform 0.15s ease;
+    margin-top: 8px;
+}
+
+.submitBtn:hover {
+    background-color: #0847aa;
+    transform: translateY(-1px);
+}
+
+.guaranteeNote {
+    font-size: 11.5px;
+    color: #64748b;
+    text-align: center;
+    margin: 4px 0 0;
+}
+
+/* Success Card */
+.successCard {
+    text-align: center;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.successIconBox {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #dcfce7;
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.successTitle {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 10px;
+}
+
+.successDesc {
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.6;
+    max-width: 440px;
+    margin: 0 0 24px;
+}
+
+.resetBtn {
+    height: 34px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    color: #0b57d0;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.resetBtn:hover {
+    background-color: #eff6ff;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sectionWrapper {
+        padding: 50px 0 60px;
+    }
+
+    .twoColRow {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .formCard {
+        padding: 24px 18px;
+    }
+
+    .heading {
+        font-size: 26px;
+    }
+}

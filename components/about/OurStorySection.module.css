@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+
+.sectionWrapper {
+    width: 100%;
+    background-color: #f8fafc;
+    padding: 24px 0 80px;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+/* ================= Top Stats Bar Card ================= */
+.statsCard {
+    background-color: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+    padding: 22px 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 56px;
+    box-sizing: border-box;
+}
+
+.statColumn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.statIconBox {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.statTextGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.statNumber {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1;
+    letter-spacing: -0.4px;
+}
+
+.statText {
+    font-size: 11.5px;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* ================= Main Story Grid ================= */
+.storyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.28fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Left Content Column */
+.storyLeft {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeWrapper {
+    margin-bottom: 14px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+}
+
+.heading {
+    font-size: 38px;
+    line-height: 1.18;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.headingHighlight {
+    color: #0b57d0;
+}
+
+.description {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #475569;
+    margin-bottom: 28px;
+}
+
+/* Strict 34px Button & 6px Radius */
+.btnWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.journeyBtn {
+    height: 34px;
+    padding: 0 18px;
+    background-color: #ffffff;
+    color: #0b57d0;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.journeyBtn:hover {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+    transform: translateY(-1px);
+}
+
+/* ================= Right Visual Stage ================= */
+.visualStage {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.imageCard {
+    width: 100%;
+    max-width: 540px;
+    height: 360px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+    background-color: #e2e8f0;
+}
+
+.teamImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bottom Left Floating Solution Pill */
+.solutionPill {
+    position: absolute;
+    bottom: -16px;
+    left: -20px;
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 6px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.pillIconBox {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pillTextGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.pillTitle {
+    font-size: 10.5px;
+    color: #64748b;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.pillHighlight {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+}
+
+/* Right Floating Quote Card */
+.quoteCard {
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    transform: translateY(-50%);
+    width: 210px;
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 6px;
+    padding: 16px 16px 14px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.quoteText {
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: #334155;
+    font-weight: 500;
+    margin: 0;
+}
+
+.quoteAccentBar {
+    width: 28px;
+    height: 2px;
+    background-color: #2563eb;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .sectionWrapper {
+        padding: 20px 0 60px;
+    }
+
+    .statsCard {
+        padding: 18px 20px;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .statNumber {
+        font-size: 18px;
+    }
+
+    .statText {
+        font-size: 10.5px;
+    }
+
+    .storyGrid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .storyLeft {
+        max-width: 100%;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    .description {
+        max-width: 620px;
+    }
+
+    .visualStage {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .imageCard {
+        max-width: 100%;
+        height: 320px;
+    }
+
+    .quoteCard {
+        right: 0px;
+        width: 190px;
+    }
+
+    .solutionPill {
+        left: 10px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .sectionWrapper {
+        padding: 16px 0 44px;
+    }
+
+    .container {
+        padding: 0 14px;
+    }
+
+    /* 2x2 Stats Grid on Mobile */
+    .statsCard {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 16px 14px;
+        gap: 16px 12px;
+        margin-bottom: 32px;
+    }
+
+    .statColumn {
+        gap: 10px;
+    }
+
+    .statIconBox {
+        width: 32px;
+        height: 32px;
+    }
+
+    .statNumber {
+        font-size: 17px;
+    }
+
+    .statText {
+        font-size: 10px;
+    }
+
+    .heading {
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        font-size: 12.5px;
+        line-height: 1.55;
+        margin-bottom: 20px;
+    }
+
+    .journeyBtn {
+        width: 100%;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    /* Responsive image stage stack */
+    .visualStage {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .imageCard {
+        height: 220px;
+        border-radius: 12px;
+    }
+
+    .solutionPill {
+        position: static;
+        width: 100%;
+    }
+
+    .quoteCard {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .heading {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 11.5px;
+    }
+}

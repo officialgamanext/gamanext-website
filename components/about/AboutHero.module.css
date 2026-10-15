@@ -1,0 +1,333 @@
+.heroWrapper {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background-image:
+        linear-gradient(to right,
+            #ffffff 0%,
+            #ffffff 38%,
+            rgba(255, 255, 255, 0.94) 48%,
+            rgba(255, 255, 255, 0.45) 62%,
+            rgba(255, 255, 255, 0) 80%),
+        url("/about/abouthero.png");
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-color: #ffffff;
+    /* Top padding ensures generous clearance beneath header border */
+    padding: 104px 0 52px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 110px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    position: relative;
+}
+
+/* ================= Left: Content Column ================= */
+.contentCol {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+/* Safe badge margin and clearance */
+.badgeWrapper {
+    margin-top: 8px;
+    margin-bottom: 18px;
+    display: inline-flex;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+    line-height: 1.2;
+}
+
+.heading {
+    font-size: 46px;
+    line-height: 1.14;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1.2px;
+    margin-bottom: 16px;
+}
+
+.headingHighlight {
+    color: #0b57d0;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+/* Strict 34px Button & 6px Radius */
+.actionsGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.primaryBtn {
+    height: 34px;
+    padding: 0 20px;
+    background-color: #0b57d0;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(11, 87, 208, 0.28);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.primaryBtn:hover {
+    background-color: #0847aa;
+    transform: translateY(-1px);
+}
+
+/* 4 Pillars Grid (Desktop) */
+.pillarsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding-top: 22px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.pillarItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pillarIconBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.pillarText {
+    display: flex;
+    flex-direction: column;
+}
+
+.pillarTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.pillarSub {
+    font-size: 11px;
+    color: #64748b;
+    line-height: 1.25;
+}
+
+/* ================= Right: Floating Graphic Stage ================= */
+.graphicStage {
+    position: relative;
+    height: 460px;
+    width: 100%;
+    pointer-events: none;
+}
+
+.floatingCard {
+    position: absolute;
+    bottom: 46px;
+    left: 20px;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 6px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.09);
+    pointer-events: auto;
+    z-index: 4;
+}
+
+.cardIconBox {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cardTextWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTitle {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.cardSubtitle {
+    font-size: 11px;
+    color: #475569;
+    line-height: 1.35;
+    margin-top: 1px;
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .heroWrapper {
+        min-height: 540px;
+        /* Clean top clearance on tablet */
+        padding: 92px 0 42px;
+        background-image:
+            linear-gradient(to right,
+                #ffffff 0%,
+                #ffffff 30%,
+                rgba(255, 255, 255, 0.92) 42%,
+                rgba(255, 255, 255, 0.35) 60%,
+                rgba(255, 255, 255, 0) 80%),
+            url("/about/abouthero.png");
+        background-size: 100% 100%, cover;
+        background-position: left center, right bottom;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    .container {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 16px;
+    }
+
+    .contentCol {
+        max-width: 440px;
+    }
+
+    .badgeWrapper {
+        margin-top: 6px;
+        margin-bottom: 16px;
+    }
+
+    .heading {
+        font-size: 34px;
+        line-height: 1.16;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+
+    .actionsGroup {
+        margin-bottom: 24px;
+    }
+
+    .primaryBtn {
+        height: 34px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+
+    .pillarsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 20px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(241, 245, 249, 0.8);
+    }
+
+    .pillarItem {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pillarIconBox {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .pillarTitle {
+        font-size: 12.5px;
+    }
+
+    .pillarSub {
+        font-size: 10.5px;
+    }
+
+    .graphicStage {
+        height: 380px;
+    }
+
+    .floatingCard {
+        bottom: 24px;
+        left: 10px;
+        padding: 10px 14px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .heroWrapper {
+        min-height: auto;
+        /* Ample space below the mobile header */
+        padding: 76px 0 38px;
+        display: block;
+        background-image:
+            linear-gradient(to bottom,
+                #ffffff 0%,
+                #ffffff 44%,
+                rgba(255, 255, 255, 0.92) 56%,
+                rgba(255, 255, 255, 0.45) 70%,
+                rgba(255, 255, 255, 0) 86%),
+            url("/about/abouthero.png") !important;
+        background-size: 100% 100%, 120% auto !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top center, center 72% !important;
+        background-color: #ffffff;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+
+    .contentCol {
+        max-width: 100%;
+    }
+
+    .badgeWrapper {
+        margin-top: 4px;
+        margin-bottom: 2px;
+    }
+}

@@ -1,0 +1,474 @@
+/* Backdrop Blur & Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Modal Outer Card (Strict 6px Radius) */
+.modalCard {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 20px 48px rgba(15, 23, 42, 0.25);
+    overflow: hidden;
+    box-sizing: border-box;
+    animation: modalEnter 0.25s ease-out;
+}
+
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.97) translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Close Button (Strictly 34px by 34px & 6px Radius) */
+.closeBtn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.closeBtn:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+/* Body Split */
+.modalBody {
+    display: grid;
+    grid-template-columns: 0.95fr 1.15fr;
+    align-items: stretch;
+}
+
+/* ================= Left Column: Tightened Spacing ================= */
+.leftCol {
+    background: linear-gradient(180deg, #f8fafc 0%, #f0f6ff 100%);
+    padding: 24px 22px 20px;
+    border-right: 1px solid #eef2f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logoWrap {
+    margin-bottom: 12px;
+}
+
+.brandLogo {
+    width: 140px;
+    height: 34px;
+    background-image: url("/gamanext-logo.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.leftHeading {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.18;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.blackText {
+    color: #0f172a;
+}
+
+.blueText {
+    color: #0b57d0;
+}
+
+.leftDesc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+/* Perks List */
+.perksList {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 16px;
+}
+
+.perkItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+}
+
+.perkIcon {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.blueIcon {
+    background-color: #e0e7ff;
+    color: #2563eb;
+}
+
+.purpleIcon {
+    background-color: #fae8ff;
+    color: #a855f7;
+}
+
+.greenIcon {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.pinkIcon {
+    background-color: #ffe4e6;
+    color: #e11d48;
+}
+
+.perkText {
+    display: flex;
+    flex-direction: column;
+}
+
+.perkTitle {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.perkSub {
+    font-size: 10px;
+    color: #64748b;
+    line-height: 1.25;
+}
+
+/* Team Photo Box - Removed excess space and set comfortable height */
+.teamImgWrapper {
+    width: 100%;
+    height: 145px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.teamImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ================= Right Column: Form ================= */
+.rightCol {
+    padding: 24px 26px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeWrapper {
+    margin-bottom: 6px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    border-radius: 6px;
+}
+
+.formTitle {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.4px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.formSubtitle {
+    font-size: 11.5px;
+    color: #64748b;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 100%;
+    position: relative;
+}
+
+.label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Strictly 34px Inputs with 6px Border Radius */
+.textInput {
+    height: 34px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    transition: border-color 0.2s ease;
+}
+
+.textInput:focus {
+    border-color: #0b57d0;
+    box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.1);
+}
+
+.textInput::placeholder {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.twoColRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Dropdown (Strict 34px Height & 6px Radius) */
+.selectWrap {
+    position: relative;
+    width: 100%;
+}
+
+.selectInput {
+    height: 34px;
+    padding: 0 26px 0 10px;
+    font-size: 12px;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.selectInput:focus {
+    border-color: #0b57d0;
+    box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.1);
+}
+
+.selectArrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    display: flex;
+}
+
+/* Textarea */
+.textareaInput {
+    padding: 6px 10px;
+    font-size: 12px;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    resize: vertical;
+    min-height: 52px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.textareaInput:focus {
+    border-color: #0b57d0;
+    box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.1);
+}
+
+.textareaInput::placeholder {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.charCount {
+    align-self: flex-end;
+    font-size: 9.5px;
+    color: #94a3b8;
+    margin-top: 1px;
+}
+
+/* Checkbox */
+.checkboxRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkboxInput {
+    width: 13px;
+    height: 13px;
+    accent-color: #0b57d0;
+    border-radius: 3px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkboxLabel {
+    font-size: 10.5px;
+    color: #475569;
+}
+
+/* Submit Button (Strictly 34px Height & 6px Radius) */
+.submitBtn {
+    height: 34px;
+    width: 100%;
+    background-color: #0b57d0;
+    color: #ffffff;
+    font-size: 12.5px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(11, 87, 208, 0.25);
+    transition: all 0.2s ease;
+    margin-top: 2px;
+}
+
+.submitBtn:hover {
+    background-color: #0847aa;
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 868px) {
+    .modalCard {
+        max-width: 620px;
+    }
+
+    .modalBody {
+        grid-template-columns: 1fr;
+    }
+
+    .leftCol {
+        display: none;
+    }
+
+    .rightCol {
+        padding: 24px 20px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .overlay {
+        padding: 10px;
+    }
+
+    .modalCard {
+        max-width: 100%;
+        max-height: 92vh;
+        overflow-y: auto;
+    }
+
+    .modalBody {
+        grid-template-columns: 1fr;
+    }
+
+    .leftCol {
+        display: none;
+    }
+
+    .rightCol {
+        padding: 20px 14px 18px;
+    }
+
+    .formTitle {
+        font-size: 18px;
+    }
+
+    .formSubtitle {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .twoColRow {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .textInput,
+    .selectInput,
+    .submitBtn {
+        height: 34px;
+        font-size: 11.5px;
+    }
+
+    .checkboxLabel {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+}

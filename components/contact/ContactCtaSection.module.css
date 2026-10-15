@@ -1,0 +1,191 @@
+.ctaSection {
+    position: relative;
+    width: 100%;
+    padding: 64px 0 72px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-image: url("/ctabc.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #021e78;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.contentWrap {
+    max-width: 760px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Badge (Strict 6px border radius) */
+.badgeWrapper {
+    margin-bottom: 16px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 14px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Heading */
+.heading {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.6px;
+    line-height: 1.22;
+    margin-bottom: 12px;
+}
+
+/* Subtitle Description */
+.description {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    max-width: 640px;
+    margin: 0 auto 28px;
+}
+
+.desktopBreak {
+    display: inline;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button (Strict 34px Height & 6px Radius) */
+.quoteBtn {
+    height: 34px;
+    padding: 0 20px;
+    background: linear-gradient(180deg, #1d4ed8 0%, #1e40af 100%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.quoteBtn:hover {
+    background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablet Breakpoint (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .ctaSection {
+        padding: 56px 0 60px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 13.5px;
+        margin-bottom: 24px;
+    }
+}
+
+/* Mobile View (320px - 425px) */
+@media screen and (max-width: 425px) {
+    .ctaSection {
+        padding: 40px 0 48px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .contentWrap {
+        max-width: 100%;
+    }
+
+    .badgeWrapper {
+        margin-bottom: 12px;
+    }
+
+    .badge {
+        font-size: 10px;
+        padding: 4px 12px;
+    }
+
+    .heading {
+        font-size: 22px;
+        line-height: 1.25;
+        letter-spacing: -0.4px;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        font-size: 12.5px;
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+
+    .desktopBreak {
+        display: none;
+    }
+
+    .quoteBtn {
+        height: 34px;
+        width: 100%;
+        max-width: 260px;
+        font-size: 12px;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 11.5px;
+    }
+
+    .quoteBtn {
+        max-width: 100%;
+    }
+}

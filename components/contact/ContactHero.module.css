@@ -1,0 +1,279 @@
+.heroSection {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+    background-image:
+        linear-gradient(to right,
+            #ffffff 0%,
+            #ffffff 40%,
+            rgba(255, 255, 255, 0.94) 50%,
+            rgba(255, 255, 255, 0.5) 65%,
+            rgba(255, 255, 255, 0) 85%),
+        url("/contact/contacthero.png");
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    background-color: #ffffff;
+    padding: 64px 0 72px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 150px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+}
+
+/* ================= Content Column ================= */
+.contentCol {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.badgeWrapper {
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+}
+
+.heading {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+}
+
+.headingBlue {
+    color: #0b57d0;
+}
+
+.description {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 480px;
+    margin-bottom: 38px;
+}
+
+/* ================= 4 Highlights Row ================= */
+.highlightsRow {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.highlightItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.iconBox {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f1f5f9;
+}
+
+.highlightText {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlightTitle {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.2;
+}
+
+.highlightSubtitle {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* ================= Floating Card ================= */
+.floatingCard {
+    position: absolute;
+    bottom: 0px;
+    right: 60px;
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 6px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    z-index: 3;
+}
+
+.cardIconBox {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #0b57d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.cardSub {
+    font-size: 10px;
+    color: #64748b;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.cardMain {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .heroSection {
+        min-height: auto;
+        padding: 56px 0;
+        background-image:
+            linear-gradient(to right,
+                #ffffff 0%,
+                #ffffff 48%,
+                rgba(255, 255, 255, 0.92) 60%,
+                rgba(255, 255, 255, 0.4) 75%,
+                rgba(255, 255, 255, 0) 100%),
+            url("/contact/contacthero.png");
+        background-size: 100% 100%, cover;
+        background-position: left center, right center;
+    }
+
+    .contentCol {
+        max-width: 440px;
+    }
+
+    .heading {
+        font-size: 38px;
+    }
+
+    .description {
+        font-size: 13.5px;
+        margin-bottom: 28px;
+    }
+
+    .highlightsRow {
+        gap: 14px;
+    }
+
+    .floatingCard {
+        right: 24px;
+        bottom: -10px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .heroSection {
+        min-height: auto;
+        padding: 36px 0 44px;
+        background-image: none !important;
+        background-color: #ffffff;
+        display: block;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .contentCol {
+        max-width: 100%;
+    }
+
+    .badgeWrapper {
+        margin-bottom: 12px;
+    }
+
+    .heading {
+        font-size: 28px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.55;
+        margin-bottom: 28px;
+    }
+
+    .highlightsRow {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 10px;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .highlightItem {
+        align-items: center;
+        text-align: center;
+    }
+
+    .floatingCard {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,277 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f2f5;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* ================= Left Group (Hamburger + Logo) ================= */
+.leftGroup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Desktop default size untouched */
+.brand {
+    display: block;
+    width: 340px;
+    height: 80px;
+    background-image: url("/gamanext-logo.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ================= Desktop Nav ================= */
+.desktopNav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: 100%;
+}
+
+.navItem {
+    position: relative;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #5f6c7b;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 4px;
+}
+
+.navItem:hover {
+    color: #0b57d0;
+}
+
+.activeNavItem {
+    color: #0b57d0;
+    font-weight: 600;
+}
+
+.activeIndicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0b57d0;
+    border-radius: 3px 3px 0 0;
+}
+
+/* ================= Action Button (Desktop: Strict 34px & 6px Radius) ================= */
+.actionWrapper {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.quoteBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 34px;
+    padding: 0 16px;
+    background-color: #0b57d0;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+}
+
+.quoteBtn:hover {
+    background-color: #0847aa;
+}
+
+.quoteBtn:active {
+    transform: scale(0.98);
+}
+
+.btnIcon {
+    margin-top: 1px;
+    transition: transform 0.2s ease;
+}
+
+.quoteBtn:hover .btnIcon {
+    transform: translateX(2px);
+}
+
+/* ================= Mobile Hamburger Button ================= */
+.hamburgerBtn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 34px;
+    height: 34px;
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.bar {
+    width: 18px;
+    height: 2px;
+    background-color: #2b3a4a;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+}
+
+.barOpen1 {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.barOpen2 {
+    opacity: 0;
+}
+
+.barOpen3 {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ================= Mobile Drawer ================= */
+.mobileDrawer {
+    display: none;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e8ecf1;
+    padding: 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease;
+}
+
+.drawerOpen {
+    max-height: 320px;
+    padding: 16px 16px 20px;
+}
+
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobileNavItem {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #435061;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.mobileNavItem:hover,
+.mobileActive {
+    color: #0b57d0;
+    background-color: #f4f7fc;
+    font-weight: 600;
+}
+
+/* ================= Tablet Breakpoint (max-width: 868px) ================= */
+@media screen and (max-width: 868px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .hamburgerBtn {
+        display: flex;
+    }
+
+    .mobileDrawer {
+        display: block;
+    }
+
+    .actionWrapper {
+        display: flex;
+    }
+
+    .brand {
+        width: 260px;
+        height: 60px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px): Scaled down logo ================= */
+@media screen and (max-width: 425px) {
+    .container {
+        height: 60px;
+        padding: 0 12px;
+        gap: 8px;
+    }
+
+    .leftGroup {
+        gap: 8px;
+    }
+
+    /* Compact dimensions so the logo fits comfortably */
+    .brand {
+        width: 145px;
+        height: 38px;
+    }
+
+    .quoteBtn {
+        height: 34px;
+        padding: 0 10px;
+        font-size: 12px;
+        gap: 4px;
+    }
+}
+
+/* Narrowest screens ~320px - 350px */
+@media screen and (max-width: 350px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .brand {
+        width: 130px;
+        height: 34px;
+    }
+
+    .quoteBtn {
+        padding: 0 7px;
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,259 @@
+.footer {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #f1f5f9;
+    padding: 68px 0 28px;
+    color: #475569;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ================= Top 4-Column Layout ================= */
+.topSection {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+    gap: 36px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Brand Column */
+.brandCol {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Exact Header Logo Image Setup */
+.brand {
+    display: block;
+    width: 240px;
+    height: 56px;
+    background-image: url("/gamanext-logo.PNG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-decoration: none;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+/* Screen reader accessible hidden text */
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.tagline {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #64748b;
+    max-width: 320px;
+    margin-bottom: 22px;
+}
+
+/* Social Icon Buttons (Strictly 34px & 6px border-radius) */
+.socialRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.socialBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #0f172a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.socialBtn:hover {
+    background-color: #f8fafc;
+    border-color: #0b57d0;
+    color: #0b57d0;
+    transform: translateY(-1px);
+}
+
+/* Column Headings */
+.colHeading {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.2px;
+    margin-bottom: 18px;
+}
+
+/* Link Columns */
+.linkCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerLink {
+    font-size: 13.5px;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.15s ease, transform 0.15s ease;
+    width: fit-content;
+}
+
+.footerLink:hover {
+    color: #0b57d0;
+    transform: translateX(2px);
+}
+
+/* Contact Column */
+.contactCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.contactItem:hover {
+    color: #0b57d0;
+}
+
+.contactIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f172a;
+    flex-shrink: 0;
+}
+
+/* ================= Bottom Legal Bar ================= */
+.bottomSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.copyrightText {
+    color: #64748b;
+}
+
+.legalLinks {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legalLink {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.legalLink:hover {
+    color: #0b57d0;
+}
+
+.legalDivider {
+    color: #cbd5e1;
+}
+
+/* ================= Tablet Breakpoint (max-width: 992px) ================= */
+@media screen and (max-width: 992px) {
+    .topSection {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px 24px;
+    }
+}
+
+/* ================= Mobile Breakpoint (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .footer {
+        padding: 48px 0 24px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .topSection {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 36px;
+    }
+
+    .brand {
+        width: 180px;
+        height: 44px;
+    }
+
+    .tagline {
+        max-width: 100%;
+    }
+
+    .socialBtn {
+        width: 34px;
+        height: 34px;
+        border-radius: 6px;
+    }
+
+    .bottomSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-top: 20px;
+        font-size: 12px;
+    }
+}
+
+/* Narrow screens ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .brand {
+        width: 160px;
+        height: 40px;
+    }
+
+    .legalLinks {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

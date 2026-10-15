@@ -1,0 +1,411 @@
+.sectionWrapper {
+    width: 100%;
+    background-color: #f8fafc;
+    padding: 64px 0 80px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Align items stretched so both cards maintain equal visual height */
+.grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* ================= Common Card Styles ================= */
+.formCard,
+.infoCard {
+    background-color: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+    padding: 36px 32px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Badge */
+.tagWrapper {
+    margin-bottom: 12px;
+}
+
+.tagBadge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    border-radius: 6px;
+}
+
+.cardTitle {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.cardSubtitle {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* ================= Form Elements ================= */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.label {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.inputField {
+    height: 34px;
+    padding: 0 12px;
+    font-size: 13px;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.inputField:focus {
+    border-color: #0b57d0;
+    box-shadow: 0 0 0 3px rgba(11, 87, 208, 0.12);
+}
+
+.inputField::placeholder {
+    color: #94a3b8;
+    font-size: 12.5px;
+}
+
+.splitRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Custom Select Dropdown */
+.selectWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.selectField {
+    height: 34px;
+    padding: 0 32px 0 12px;
+    font-size: 13px;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.selectField:focus {
+    border-color: #0b57d0;
+    box-shadow: 0 0 0 3px rgba(11, 87, 208, 0.12);
+}
+
+.selectArrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+.textareaField {
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #0f172a;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    resize: vertical;
+    min-height: 90px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.textareaField:focus {
+    border-color: #0b57d0;
+    box-shadow: 0 0 0 3px rgba(11, 87, 208, 0.12);
+}
+
+.textareaField::placeholder {
+    color: #94a3b8;
+    font-size: 12.5px;
+}
+
+/* Submit CTA Button */
+.submitBtn {
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #0b57d0;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0 20px;
+    margin-top: auto;
+    box-shadow: 0 4px 12px rgba(11, 87, 208, 0.25);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    width: 100%;
+}
+
+.submitBtn:hover {
+    background-color: #0847aa;
+}
+
+/* ================= Right: Contact Information ================= */
+.infoTopHeader {
+    margin-bottom: 12px;
+}
+
+.contactItemsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 20px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.infoIconWrap {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.infoText {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.infoHeading {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.infoLink,
+.infoValue {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0b57d0;
+    text-decoration: none;
+}
+
+.infoValue {
+    color: #334155;
+}
+
+.infoLink:hover {
+    text-decoration: underline;
+}
+
+.infoNote {
+    font-size: 11.5px;
+    color: #64748b;
+    margin-top: 1px;
+}
+
+/* Social Buttons Row */
+.socialGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.socialIconBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    color: #0b57d0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.socialIconBtn:hover {
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+    transform: translateY(-1px);
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .sectionWrapper {
+        padding: 52px 0 64px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .formCard,
+    .infoCard {
+        padding: 28px 24px;
+        height: auto;
+    }
+
+    .contactItemsList {
+        gap: 24px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .sectionWrapper {
+        padding: 36px 0 48px;
+    }
+
+    .container {
+        padding: 0 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .formCard,
+    .infoCard {
+        padding: 22px 16px;
+        height: auto;
+    }
+
+    .cardTitle {
+        font-size: 22px;
+    }
+
+    .cardSubtitle {
+        font-size: 12.5px;
+        margin-bottom: 20px;
+    }
+
+    .splitRow {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .inputField,
+    .selectField,
+    .submitBtn {
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .textareaField {
+        min-height: 80px;
+        font-size: 12px;
+    }
+
+    .contactItemsList {
+        gap: 20px;
+    }
+
+    .infoIconWrap {
+        width: 32px;
+        height: 32px;
+    }
+
+    .infoHeading {
+        font-size: 12.5px;
+    }
+
+    .infoLink,
+    .infoValue {
+        font-size: 12px;
+    }
+
+    .infoNote {
+        font-size: 11px;
+    }
+
+    .socialIconBtn {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .socialGroup {
+        gap: 6px;
+    }
+}

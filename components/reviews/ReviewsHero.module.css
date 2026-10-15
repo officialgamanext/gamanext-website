@@ -1,0 +1,482 @@
+.heroSection {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+    background-image:
+        linear-gradient(to right,
+            #ffffff 0%,
+            #ffffff 38%,
+            rgba(255, 255, 255, 0.94) 48%,
+            rgba(255, 255, 255, 0.45) 62%,
+            rgba(255, 255, 255, 0) 80%),
+        url("/reviews/reviewshero.png");
+    background-size: 100% 100%, contain;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-color: #ffffff;
+    padding: 56px 0 52px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 110px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    position: relative;
+}
+
+/* ================= Left: Content Column ================= */
+.contentCol {
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.badgeWrapper {
+    margin-bottom: 14px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+    /* Strict 6px requirement */
+}
+
+.heading {
+    font-size: 44px;
+    line-height: 1.16;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.headingHighlight {
+    color: #0b57d0;
+}
+
+.description {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+/* Buttons (Strictly 34px Height & 6px Radius) */
+.actionsRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 36px;
+}
+
+.primaryBtn {
+    height: 34px;
+    /* Strict 34px requirement */
+    padding: 0 18px;
+    background-color: #0b57d0;
+    color: #ffffff;
+    border-radius: 6px;
+    /* Strict 6px requirement */
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(11, 87, 208, 0.28);
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.primaryBtn:hover {
+    background-color: #0847aa;
+    transform: translateY(-1px);
+}
+
+.secondaryBtn {
+    height: 34px;
+    /* Strict 34px requirement */
+    padding: 0 16px;
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    /* Strict 6px requirement */
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.secondaryBtn:hover {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+}
+
+/* 4 Metrics Row */
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+    align-items: flex-start;
+    padding-top: 22px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.metricItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.metricIconBox {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.metricValue {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.metricLabel {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* ================= Right: Floating Cards Stage ================= */
+.floatingStage {
+    position: relative;
+    height: 480px;
+    width: 100%;
+    pointer-events: none;
+}
+
+/* Top Right Handwritten Doodle */
+.handwrittenDoodle {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #64748b;
+    font-style: italic;
+    font-weight: 600;
+    z-index: 4;
+}
+
+.doodleHighlight {
+    color: #7c3aed;
+}
+
+.doodleArrow {
+    margin-top: 4px;
+    transform: rotate(-10deg);
+}
+
+/* Common Card Style (Strict 6px Border Radius) */
+.reviewCardTop,
+.reviewCardMiddle,
+.reviewCardBottom {
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 6px;
+    /* Strict 6px requirement */
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+    pointer-events: auto;
+    position: absolute;
+    z-index: 5;
+    max-width: 250px;
+    box-sizing: border-box;
+}
+
+.reviewCardTop {
+    top: 110px;
+    left: 20px;
+}
+
+.reviewCardMiddle {
+    top: 240px;
+    left: 30px;
+}
+
+.reviewCardBottom {
+    bottom: 60px;
+    right: 15px;
+}
+
+.avatarWrap {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.starsRow {
+    color: #f59e0b;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 3px;
+}
+
+.quoteText {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.25;
+    margin: 0;
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .heroSection {
+        min-height: 520px;
+        padding: 48px 0 40px;
+        background-image:
+            linear-gradient(to right,
+                #ffffff 0%,
+                #ffffff 36%,
+                rgba(255, 255, 255, 0.92) 48%,
+                rgba(255, 255, 255, 0.45) 64%,
+                rgba(255, 255, 255, 0) 84%),
+            url("/reviews/reviewshero.png");
+        background-size: 100% 100%, auto 85%;
+        background-position: left center, right -0.5cm;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    .container {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 16px;
+    }
+
+    .contentCol {
+        max-width: 440px;
+    }
+
+    .heading {
+        font-size: 34px;
+    }
+
+    .description {
+        font-size: 13.5px;
+        margin-bottom: 24px;
+    }
+
+    .actionsRow {
+        gap: 10px;
+        margin-bottom: 28px;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        height: 34px;
+        padding: 0 14px;
+        font-size: 12px;
+    }
+
+    .metricsGrid {
+        gap: 14px;
+        padding-top: 18px;
+    }
+
+    .metricValue {
+        font-size: 18px;
+    }
+
+    .floatingStage {
+        height: 400px;
+    }
+
+    .reviewCardTop {
+        top: 90px;
+        left: 0;
+    }
+
+    .reviewCardMiddle {
+        top: 200px;
+        left: 10px;
+    }
+
+    .reviewCardBottom {
+        bottom: 40px;
+        right: 0;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .heroSection {
+        min-height: auto;
+        padding: 32px 0 36px;
+        display: block;
+        background-image:
+            linear-gradient(to bottom,
+                #ffffff 0%,
+                #ffffff 44%,
+                rgba(255, 255, 255, 0.92) 56%,
+                rgba(255, 255, 255, 0.45) 70%,
+                rgba(255, 255, 255, 0) 86%),
+            url("/reviews/reviewshero.png") !important;
+        background-size: 100% 100%, 115% auto !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top center, center 72% !important;
+        background-color: #ffffff;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+
+    .contentCol {
+        max-width: 100%;
+    }
+
+    .badgeWrapper {
+        margin-bottom: 12px;
+    }
+
+    .heading {
+        font-size: 28px;
+        line-height: 1.18;
+        letter-spacing: -0.6px;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+
+    .actionsRow {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 8px;
+        margin-bottom: 26px;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        flex: 1;
+        height: 34px;
+        padding: 0 8px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    /* 2x2 Metrics Grid on mobile */
+    .metricsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 12px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(241, 245, 249, 0.85);
+    }
+
+    .metricItem {
+        align-items: center;
+        text-align: center;
+    }
+
+    .metricValue {
+        font-size: 20px;
+    }
+
+    .metricLabel {
+        font-size: 11px;
+    }
+
+    /* Stacked testimonial pills for mobile view */
+    .floatingStage {
+        height: auto;
+        margin-top: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        pointer-events: auto;
+    }
+
+    .handwrittenDoodle {
+        display: none;
+    }
+
+    .reviewCardTop,
+    .reviewCardMiddle,
+    .reviewCardBottom {
+        position: static;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .heroSection {
+        background-size: 100% 100%, 130% auto !important;
+        background-position: top center, center 75% !important;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        font-size: 11px;
+        padding: 0 4px;
+    }
+}

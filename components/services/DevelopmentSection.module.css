@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+
+.sectionWrapper {
+    width: 100%;
+    background-color: #f8fafc;
+    padding: 64px 0 80px;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    gap: 32px;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+/* ================= Left Column ================= */
+.headerCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeWrapper {
+    margin-bottom: 12px;
+}
+
+.badgePill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background-color: #eaf1fb;
+    border-radius: 6px;
+}
+
+.badgeText {
+    color: #1d4ed8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.2;
+}
+
+.heading {
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.9px;
+    margin: 0 0 14px;
+}
+
+.description {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0 0 24px;
+}
+
+/* Primary Section Button (Strict 34px Height & 6px Radius) */
+.actionWrap {
+    display: flex;
+    align-items: center;
+}
+
+.learnMoreMainBtn {
+    height: 34px;
+    padding: 0 18px;
+    background-color: transparent;
+    color: #0b57d0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding-left: 0;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.learnMoreMainBtn:hover {
+    color: #0847aa;
+    transform: translateX(3px);
+}
+
+/* ================= Right: 4 Horizontal Cards Row ================= */
+.cardsRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* Service Card (Strict 6px Border Radius) */
+.serviceCard {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 6px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.serviceCard:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+}
+
+/* Illustration Top Box */
+.illustrationArea {
+    width: 100%;
+    height: 136px;
+    background: linear-gradient(180deg, #f0f6ff 0%, #fcfdff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* 1. Web & Mobile Mockup */
+.mockupWorkspace {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktopMonitor {
+    width: 90px;
+    height: 64px;
+    background-color: #2563eb;
+    border-radius: 5px;
+    padding: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.screenHeader {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 3px;
+}
+
+.dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 0.7;
+}
+
+.screenBody {
+    background-color: #ffffff;
+    border-radius: 3px;
+    flex: 1;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.screenHeroBar {
+    width: 80%;
+    height: 4px;
+    background-color: #93c5fd;
+    border-radius: 2px;
+}
+
+.screenGrid2 {
+    display: flex;
+    gap: 3px;
+    flex: 1;
+}
+
+.screenCard {
+    flex: 1;
+    background-color: #e0f2fe;
+    border-radius: 2px;
+}
+
+.monitorBase {
+    width: 22px;
+    height: 6px;
+    background-color: #1d4ed8;
+    margin: 2px auto 0;
+    border-radius: 2px;
+}
+
+.phoneDevice {
+    position: absolute;
+    right: -16px;
+    bottom: 0px;
+    width: 30px;
+    height: 52px;
+    background-color: #0f172a;
+    border-radius: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.25);
+}
+
+.phoneSpeaker {
+    width: 8px;
+    height: 2px;
+    background-color: #475569;
+    border-radius: 1px;
+    margin: 1px auto 2px;
+}
+
+.phoneScreen {
+    background-color: #ffffff;
+    border-radius: 3px;
+    height: 42px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.phoneTop {
+    width: 12px;
+    height: 3px;
+    background-color: #2563eb;
+    border-radius: 1px;
+}
+
+.phoneRow {
+    width: 100%;
+    height: 2px;
+    background-color: #e2e8f0;
+    border-radius: 1px;
+}
+
+/* 2. Custom Software Mockup */
+.customSoftWorkspace {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gearIconBox {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #e0edff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.codeTerminalBox {
+    width: 60px;
+    height: 46px;
+    background-color: #1e293b;
+    border-radius: 4px;
+    padding: 4px 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.termTag {
+    color: #38bdf8;
+    font-size: 9px;
+    font-weight: 700;
+    font-family: monospace;
+}
+
+.terminalLines {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.line1 {
+    width: 80%;
+    height: 2px;
+    background-color: #94a3b8;
+    border-radius: 1px;
+}
+
+.line2 {
+    width: 50%;
+    height: 2px;
+    background-color: #64748b;
+    border-radius: 1px;
+}
+
+/* 3. CRM Mockup */
+.crmWorkspace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 110px;
+}
+
+.crmHeaderBadge {
+    position: absolute;
+    top: -8px;
+    right: 6px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: 800;
+    padding: 1px 6px;
+    border-radius: 3px;
+}
+
+.crmDashboard {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: 5px;
+    padding: 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.crmRowTop {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.crmAvatarIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crmLineGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.crmLineA {
+    width: 70%;
+    height: 4px;
+    background-color: #93c5fd;
+    border-radius: 2px;
+}
+
+.crmLineB {
+    width: 40%;
+    height: 3px;
+    background-color: #cbd5e1;
+    border-radius: 1.5px;
+}
+
+.crmDataRows {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.crmDataBar {
+    width: 100%;
+    height: 3px;
+    background-color: #f1f5f9;
+    border-radius: 1.5px;
+}
+
+/* 4. ERM Mockup */
+.ermWorkspace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100px;
+}
+
+.ermPillTop {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 2px;
+}
+
+.ermDotGreen {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #10b981;
+}
+
+.ermDotOrange {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #f59e0b;
+}
+
+.ermChartCard {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.chartBars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 34px;
+}
+
+.barCol {
+    width: 6px;
+    border-radius: 2px 2px 0 0;
+}
+
+.barCol1 {
+    height: 12px;
+    background-color: #cbd5e1;
+}
+
+.barCol2 {
+    height: 20px;
+    background-color: #93c5fd;
+}
+
+.barCol3 {
+    height: 28px;
+    background-color: #3b82f6;
+}
+
+.barCol4 {
+    height: 34px;
+    background-color: #1d4ed8;
+}
+
+/* Card Content Area */
+.cardContent {
+    padding: 16px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cardTitle {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.2px;
+    line-height: 1.35;
+    margin: 0 0 6px;
+    min-height: 36px;
+}
+
+.cardDesc {
+    font-size: 11.5px;
+    line-height: 1.5;
+    color: #64748b;
+    margin: 0 0 16px;
+    flex: 1;
+}
+
+/* Strict 34px Button & 6px Radius on Every Card */
+.cardActionBtn {
+    height: 34px;
+    width: 100%;
+    padding: 0 12px;
+    background-color: #ffffff;
+    color: #0b57d0;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.cardActionBtn:hover {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+    transform: translateY(-1px);
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .sectionWrapper {
+        padding: 48px 0 64px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .headerCol {
+        max-width: 580px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .cardsRow {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .illustrationArea {
+        height: 140px;
+    }
+
+    .cardTitle {
+        min-height: auto;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .sectionWrapper {
+        padding: 36px 0 48px;
+    }
+
+    .container {
+        padding: 0 16px;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .heading {
+        font-size: 24px;
+        line-height: 1.22;
+    }
+
+    .description {
+        font-size: 12.5px;
+        margin-bottom: 16px;
+    }
+
+    .cardsRow {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .illustrationArea {
+        height: 130px;
+    }
+
+    .cardContent {
+        padding: 14px 12px;
+    }
+
+    .cardTitle {
+        font-size: 13px;
+        min-height: auto;
+        margin-bottom: 4px;
+    }
+
+    .cardDesc {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .cardActionBtn {
+        height: 34px;
+        font-size: 11px;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .heading {
+        font-size: 21px;
+    }
+
+    .illustrationArea {
+        height: 120px;
+    }
+}

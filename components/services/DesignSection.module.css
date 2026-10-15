@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+
+.sectionWrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 64px 0 80px;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 28px;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+/* ================= Left: Intro Column ================= */
+.introCol {
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeWrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.iconTag {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    /* Strict 6px */
+    background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(236, 72, 153, 0.25);
+    flex-shrink: 0;
+}
+
+.badgeText {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+    /* Strict 6px */
+    line-height: 1.3;
+}
+
+.heading {
+    font-size: 34px;
+    line-height: 1.18;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.9px;
+    margin: 0 0 14px;
+}
+
+.description {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0 0 24px;
+}
+
+/* 34px Primary CTA */
+.actionWrap {
+    display: flex;
+    align-items: center;
+}
+
+.learnMoreMainBtn {
+    height: 34px;
+    padding: 0;
+    background-color: transparent;
+    color: #0b57d0;
+    border: none;
+    font-size: 12.5px;
+    font-weight: 700;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.learnMoreMainBtn:hover {
+    color: #0847aa;
+    transform: translateX(3px);
+}
+
+/* ================= Right: 6 Cards Grid / Scroll ================= */
+.cardsScrollArea {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+/* Subtle scrollbar */
+.cardsScrollArea::-webkit-scrollbar {
+    height: 5px;
+}
+
+.cardsScrollArea::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 148px);
+    gap: 14px;
+    align-items: stretch;
+    min-width: min-content;
+}
+
+/* Card Base (Strict 6px border radius) */
+.card {
+    border-radius: 6px;
+    /* Strict 6px */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* Pastel Tint Backgrounds */
+.cardPink {
+    background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%);
+    border-color: #ffe4e6;
+}
+
+.cardCream {
+    background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+    border-color: #fef3c7;
+}
+
+.cardViolet {
+    background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
+    border-color: #f3e8ff;
+}
+
+.cardPeach {
+    background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%);
+    border-color: #ffedd5;
+}
+
+.cardBlue {
+    background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+    border-color: #dbeafe;
+}
+
+.cardLightPink {
+    background: linear-gradient(180deg, #fdf2f8 0%, #ffffff 100%);
+    border-color: #fce7f3;
+}
+
+/* Card Graphic Area */
+.cardGraphicArea {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 1. Geometric Logo Mockup */
+.logoMockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.geometricLogo {
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.logoPillLong {
+    position: absolute;
+    left: 6px;
+    bottom: 4px;
+    width: 16px;
+    height: 38px;
+    background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 8px;
+    transform: rotate(-32deg);
+}
+
+.logoPillShort {
+    position: absolute;
+    right: 6px;
+    bottom: 4px;
+    width: 16px;
+    height: 24px;
+    background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
+    border-radius: 8px;
+    transform: rotate(32deg);
+}
+
+/* 2. Business Cards Mockup */
+.brandingMockup {
+    position: relative;
+    width: 68px;
+    height: 52px;
+}
+
+.bizCardFront {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 32px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.bizBrandText {
+    font-size: 7px;
+    font-weight: 800;
+    color: #1e3a8a;
+    line-height: 1;
+}
+
+.bizSubBar {
+    width: 16px;
+    height: 2px;
+    background-color: #3b82f6;
+    border-radius: 1px;
+    margin-top: 2px;
+}
+
+.bizCardBack {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 48px;
+    height: 32px;
+    background-color: #1e3a8a;
+    border-radius: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 14px rgba(30, 58, 138, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bizBackAccent {
+    width: 10px;
+    height: 2px;
+    background-color: #60a5fa;
+    border-radius: 1px;
+    margin-bottom: 3px;
+}
+
+.bizBackLines {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.bizBackLine {
+    width: 100%;
+    height: 1.5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1px;
+}
+
+/* 3. Poster Mockup */
+.posterMockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posterSheet {
+    width: 42px;
+    height: 56px;
+    background: linear-gradient(145deg, #7c3aed 0%, #ec4899 100%);
+    border-radius: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 14px rgba(124, 58, 237, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.posterHeader {
+    width: 18px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 1px;
+}
+
+.posterGraphic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posterGraphicItem {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.posterLines {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.posterLine {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1px;
+}
+
+/* 4. Banner Mockup */
+.bannerMockup {
+    position: relative;
+    width: 72px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannerBack {
+    position: absolute;
+    top: 0;
+    width: 64px;
+    height: 34px;
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    border-radius: 4px;
+    padding: 3px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(234, 88, 12, 0.2);
+}
+
+.bannerText {
+    color: #ffffff;
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.bannerFront {
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+    width: 44px;
+    height: 24px;
+    background-color: #1e293b;
+    border-radius: 3px;
+    padding: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 12px rgba(15, 23, 42, 0.25);
+}
+
+.bannerBadge {
+    width: 12px;
+    height: 3px;
+    background-color: #f97316;
+    border-radius: 1px;
+}
+
+.bannerLine {
+    width: 100%;
+    height: 2px;
+    background-color: #64748b;
+    border-radius: 1px;
+}
+
+/* 5. Web Browser Mockup */
+.webDesignMockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.webBrowser {
+    width: 58px;
+    height: 46px;
+    background-color: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+}
+
+.browserBar {
+    background-color: #eff6ff;
+    height: 7px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 3px;
+    border-bottom: 1px solid #dbeafe;
+}
+
+.browserDot {
+    width: 2.5px;
+    height: 2.5px;
+    border-radius: 50%;
+    background-color: #93c5fd;
+}
+
+.browserCanvas {
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.browserHero {
+    width: 100%;
+    height: 12px;
+    background-color: #2563eb;
+    border-radius: 2px;
+}
+
+.browserCards {
+    display: flex;
+    gap: 3px;
+}
+
+.miniCard {
+    flex: 1;
+    height: 12px;
+    background-color: #e0f2fe;
+    border-radius: 1px;
+}
+
+/* 6. Pen Tool Canvas Mockup */
+.vectorMockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.penToolCanvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Body & Strict 34px Button */
+.cardBody {
+    padding: 12px 10px 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #ffffff;
+}
+
+.cardTitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.2px;
+    line-height: 1.3;
+    margin: 0 0 4px;
+    min-height: 32px;
+}
+
+.cardDesc {
+    font-size: 10.5px;
+    line-height: 1.45;
+    color: #64748b;
+    margin: 0 0 12px;
+    flex: 1;
+}
+
+/* Strict 34px Height & 6px Radius */
+.cardActionBtn {
+    height: 34px;
+    /* Strict 34px */
+    width: 100%;
+    padding: 0 8px;
+    background-color: #ffffff;
+    color: #0b57d0;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    /* Strict 6px */
+    font-size: 11px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.cardActionBtn:hover {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+    transform: translateY(-1px);
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .sectionWrapper {
+        padding: 48px 0 64px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .introCol {
+        max-width: 580px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .cardsGrid {
+        grid-template-columns: repeat(6, 142px);
+        gap: 12px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .sectionWrapper {
+        padding: 36px 0 48px;
+    }
+
+    .container {
+        padding: 0 16px;
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .heading {
+        font-size: 24px;
+        line-height: 1.22;
+    }
+
+    .description {
+        font-size: 12.5px;
+        margin-bottom: 16px;
+    }
+
+    /* 2 columns on mobile for easy vertical reading */
+    .cardsScrollArea {
+        overflow-x: visible;
+    }
+
+    .cardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        min-width: 100%;
+    }
+
+    .cardGraphicArea {
+        height: 96px;
+    }
+
+    .cardBody {
+        padding: 10px 8px 12px;
+    }
+
+    .cardTitle {
+        font-size: 11.5px;
+        min-height: auto;
+        margin-bottom: 4px;
+    }
+
+    .cardDesc {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .cardActionBtn {
+        height: 34px;
+        font-size: 10.5px;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .heading {
+        font-size: 21px;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,234 @@
+.servicesSection {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ================= Header Area ================= */
+.headerArea {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tagBadge {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #eef4fe;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+    /* 6px requirement */
+    margin-bottom: 16px;
+}
+
+.sectionHeading {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.6px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.sectionSubtitle {
+    font-size: 14.5px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ================= Grid Layout ================= */
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* ================= Individual Card (6px border-radius) ================= */
+.card {
+    border-radius: 6px;
+    /* 6px requirement */
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    padding: 28px 22px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.05);
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Icon */
+.iconCircle {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.cardTitle {
+    font-size: 19px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.3px;
+    margin-bottom: 8px;
+}
+
+.cardDesc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    min-height: 38px;
+}
+
+/* Checklist items */
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkIcon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.itemLabel {
+    font-size: 13px;
+    font-weight: 500;
+    color: #334155;
+    line-height: 1.35;
+}
+
+/* ================= Bottom Button (Strictly 34px height) ================= */
+.cardFooter {
+    padding-top: 14px;
+    border-top: 1px dashed rgba(203, 213, 225, 0.6);
+}
+
+.learnMoreBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 34px;
+    /* 34px requirement */
+    font-size: 13px;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+    transition: gap 0.2s ease, color 0.15s ease;
+}
+
+.learnMoreBtn:hover {
+    gap: 10px;
+    color: #1d4ed8;
+}
+
+/* ================= Tablet Breakpoint (max-width: 992px) ================= */
+@media screen and (max-width: 992px) {
+    .servicesSection {
+        padding-top: 24px;
+    }
+
+    .cardGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .cardDesc {
+        min-height: auto;
+    }
+}
+
+/* ================= Mobile Breakpoint (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .servicesSection {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .headerArea {
+        margin-bottom: 34px;
+    }
+
+    .sectionHeading {
+        font-size: 26px;
+        letter-spacing: -0.4px;
+    }
+
+    .sectionSubtitle {
+        font-size: 13px;
+    }
+
+    .cardGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 22px 18px 16px;
+    }
+
+    .learnMoreBtn {
+        height: 34px;
+        /* Strictly 34px */
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+/* Extra small devices ~320px */
+@media screen and (max-width: 340px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .sectionHeading {
+        font-size: 23px;
+    }
+
+    .cardTitle {
+        font-size: 17px;
+    }
+}

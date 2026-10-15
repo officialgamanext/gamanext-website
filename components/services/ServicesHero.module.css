@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+
+.heroSection {
+    position: relative;
+    width: 100%;
+    min-height: 620px;
+    background-image:
+        linear-gradient(to right,
+            #ffffff 0%,
+            #ffffff 38%,
+            rgba(255, 255, 255, 0.94) 48%,
+            rgba(255, 255, 255, 0.45) 62%,
+            rgba(255, 255, 255, 0) 80%),
+        url("/services/serviceshero.png");
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat, no-repeat;
+    /* Anchors the top of the background image safely below the header */
+    background-position: left center, right top;
+    background-color: #ffffff;
+    /* Increased top padding from 72px to 96px to eliminate top cutting */
+    padding: 96px 0 56px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* ================= Left: Content Column ================= */
+.contentCol {
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+/* Badge (Strict 6px border radius) */
+.badgeWrapper {
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #eaf1fb;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 6px;
+    line-height: 1.2;
+}
+
+.heading {
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -1.2px;
+    margin: 0 0 16px;
+}
+
+.headingHighlight {
+    color: #0b57d0;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 480px;
+    margin: 0 0 28px;
+}
+
+/* Strict 34px Buttons & 6px Radius */
+.actionsRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 34px;
+}
+
+.primaryBtn {
+    height: 34px;
+    padding: 0 20px;
+    background-color: #0b57d0;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(11, 87, 208, 0.28);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.primaryBtn:hover {
+    background-color: #0847aa;
+    transform: translateY(-1px);
+}
+
+.secondaryBtn {
+    height: 34px;
+    padding: 0 16px;
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.secondaryBtn:hover {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+    transform: translateY(-1px);
+}
+
+/* ================= 4 Bottom Pillars ================= */
+.pillarsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    padding-top: 22px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.pillarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.pillarIconBox {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.purpleIcon {
+    background-color: #f3e8ff;
+}
+
+.blueIcon {
+    background-color: #dbeafe;
+}
+
+.skyIcon {
+    background-color: #e0f2fe;
+}
+
+.greenIcon {
+    background-color: #dcfce7;
+}
+
+.pillarText {
+    display: flex;
+    flex-direction: column;
+}
+
+.pillarTitle {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+}
+
+.pillarSub {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #475569;
+    line-height: 1.25;
+}
+
+.visualSpacer {
+    width: 100%;
+    height: 440px;
+    pointer-events: none;
+}
+
+/* ================= Tablet Breakpoint (768px - 1024px) ================= */
+@media screen and (max-width: 1024px) {
+    .heroSection {
+        min-height: 540px;
+        padding: 80px 0 40px;
+        background-image:
+            linear-gradient(to right,
+                #ffffff 0%,
+                #ffffff 32%,
+                rgba(255, 255, 255, 0.92) 44%,
+                rgba(255, 255, 255, 0.35) 62%,
+                rgba(255, 255, 255, 0) 80%),
+            url("/services/serviceshero.png");
+        background-size: 100% 100%, cover;
+        background-position: left center, right top;
+    }
+
+    .container {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 16px;
+    }
+
+    .contentCol {
+        max-width: 440px;
+    }
+
+    .heading {
+        font-size: 34px;
+        line-height: 1.18;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+
+    .actionsRow {
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        height: 34px;
+        padding: 0 14px;
+        font-size: 12px;
+    }
+
+    .pillarsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 18px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(241, 245, 249, 0.85);
+    }
+
+    .pillarItem {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pillarIconBox {
+        margin-bottom: 0;
+    }
+
+    .pillarTitle {
+        font-size: 12px;
+    }
+
+    .pillarSub {
+        font-size: 11px;
+    }
+
+    .visualSpacer {
+        height: 360px;
+    }
+}
+
+/* ================= Mobile View (320px - 425px) ================= */
+@media screen and (max-width: 425px) {
+    .heroSection {
+        min-height: auto;
+        padding: 56px 0 36px;
+        display: block;
+        background-image:
+            linear-gradient(to bottom,
+                #ffffff 0%,
+                #ffffff 44%,
+                rgba(255, 255, 255, 0.92) 56%,
+                rgba(255, 255, 255, 0.45) 70%,
+                rgba(255, 255, 255, 0) 86%),
+            url("/services/serviceshero.png") !important;
+        background-size: 100% 100%, 120% auto !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: top center, center 72% !important;
+        background-color: #ffffff;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+
+    .contentCol {
+        max-width: 100%;
+    }
+
+    .badgeWrapper {
+        margin-bottom: 12px;
+    }
+
+    .heading {
+        font-size: 28px;
+        line-height: 1.18;
+        letter-spacing: -0.6px;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.55;
+        margin-bottom: 20px;
+    }
+
+    .actionsRow {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        flex: 1;
+        height: 34px;
+        padding: 0 8px;
+        font-size: 11.5px;
+        border-radius: 6px;
+    }
+
+    .pillarsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 12px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(241, 245, 249, 0.85);
+    }
+
+    .pillarItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .pillarTitle {
+        font-size: 12px;
+    }
+
+    .pillarSub {
+        font-size: 10.5px;
+    }
+
+    .visualSpacer {
+        display: none;
+    }
+}
+
+/* Small mobile devices ~320px */
+@media screen and (max-width: 340px) {
+    .heroSection {
+        background-size: 100% 100%, 130% auto !important;
+        padding-top: 48px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        font-size: 11px;
+        padding: 0 4px;
+    }
+}

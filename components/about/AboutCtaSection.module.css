@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 .ctaWrapper {
     position: relative;
@@ -6,7 +6,7 @@
     padding: 62px 0 68px;
     overflow: hidden;
     box-sizing: border-box;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     /* Deep royal blue backdrop with multi-radial wave curves */
     background-image: url("/ctabc.png");
 }

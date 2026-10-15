@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
 
-const sora = Sora({
+const quicksand = Quicksand({
   subsets: ["latin"],
-  variable: "--font-sora",
+  variable: "--font-quicksand",
   weight: ["300", "400", "500", "600", "700"],
 });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={sora.variable} suppressHydrationWarning>
+    <html lang="en" className={quicksand.variable} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <Header />
         <main style={{ flex: 1 }}>{children}</main>

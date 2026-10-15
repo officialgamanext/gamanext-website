@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 .heroSection {
     position: relative;
@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     overflow: hidden;
 }
 
